@@ -30,9 +30,14 @@ $secondary-color: #000;
 // Use inline IE styles
 
 // CSS Preprocess Logic
-	@import "_preprocess";
-	@import "_normalize";
+	@import "preprocess";
+	@import "normalize";
+
+	// CSS Grid Framework Logic
+	@import "foundation/settings";
+	@import "foundation/components/block-grid";
+	@import "foundation/components/grid";
 
 // Theme Styles
-	@import "_base";
-// @import "_print";
+	@import "base";
+// @import "print";
