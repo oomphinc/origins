@@ -31,6 +31,7 @@ $secondary-color: #000;
 
 // CSS Preprocess Logic
 	@import "_preprocess";
+	@import "_normalize";
 
 // Theme Styles
 	@import "_base";
