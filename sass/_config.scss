@@ -1,0 +1,43 @@
+// @file Config
+// This file contains theme variables and compile order specifications.
+
+// VARIABLES
+
+// Font Stacks
+$base-font-stack: sans;
+$alt-font-stack: sans-serif;
+
+// Colors
+$primary-color: #fff;
+$secondary-color: #000;
+
+// Imports
+//
+// This is the master configuration file for our theme, which contains an annotated
+// list of @import functions which comprise the separate stylesheets which make up
+// specific parts of the theme.
+
+// Theme Modules
+//
+// Modules, designated with an underscore prefix, don't generate any CSS output
+// themselves but instead contain mixins and definte base variables used by other
+// stylesheets.
+
+// CSS Philosiphies
+//
+// Use rems for font sizes
+// Use inline media queries
+// Use inline IE styles
+
+// CSS Preprocess Logic
+	@import "preprocess";
+	@import "normalize";
+
+	// CSS Grid Framework Logic
+	@import "foundation/settings";
+	@import "foundation/components/block-grid";
+	@import "foundation/components/grid";
+
+// Theme Styles
+	@import "base";
+// @import "print";
