@@ -10,18 +10,9 @@
 $include-html-grid-classes: $include-html-classes !default;
 $include-xl-html-grid-classes: false !default;
 
-$row-width: rem-calc(1000) !default;
-$total-columns: 12 !default;
-
 //
 // Grid Functions
 //
-
-// Deprecated: We'll drop support for this in 5.1, use grid-calc()
-@function gridCalc($colNumber, $totalColumns) {
-  @warn "gridCalc() is deprecated, use grid-calc()";
-  @return grid-calc($colNumber, $totalColumns);
-}
 
 // @FUNCTION
 // $colNumber - Found in settings file
@@ -35,8 +26,6 @@ $total-columns: 12 !default;
 //
 
 // For creating container, nested, and collapsed rows.
-//
-//
 // $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
 @mixin grid-row($behavior: false) {
 
