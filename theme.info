@@ -40,6 +40,8 @@ regions[sidebar_first] = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[footer] = Footer
 
+; You can also set regions to be hidden on the Blocks admin screen like so:
+; regions[regions_hidden][] = nav
 
 ; FEATURES (the checkboxes on the theme admin screen)
 ; ===================================================
@@ -54,13 +56,16 @@ features[] = node_user_picture
 features[] = comment_user_picture
 features[] = comment_user_verification
 features[] = favicon
-features[] = main_menu
-features[] = secondary_menu
+; We almost always use a block to display menus, so we remove these.
+; You can turn them back on if you want to use them instead.
+;features[] = main_menu
+;features[] = secondary_menu
 
 ; SETTINGS (checking/unchecking the features defined above)
 ; ===================================================
 
 ; See example useage below. Add to override defaults.
+; If you remove a feature above, you don't have to disable it below.
 ;settings[toggle_logo] = 1
 ;settings[toggle_main_menu] = 1
 
