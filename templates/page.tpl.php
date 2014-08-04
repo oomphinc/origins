@@ -78,8 +78,8 @@
 <div id="page-wrapper">
   <div id="page">
 
-    <header id="header">
-      <section class="header">
+    <div id="header-wrapper">
+      <header id="header" class="header">
 
         <?php if ($logo): ?>
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -109,8 +109,8 @@
 
         <?php print render($page['header']); ?>
 
-      </section>
-    </header> <!-- /.section, /#header -->
+      </header>
+    </div> <!-- header, #header-wrapper -->
 
     <?php if ($page['nav']): ?>
       <nav id="site-navigation">
@@ -126,8 +126,8 @@
 
     <?php print $messages; ?>
 
-    <main id="main" class="main-wrapper">
-      <section id="main-content">
+    <div id="main-wrapper">
+      <main id="main" class="main">
 
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -178,14 +178,14 @@
           </section> <!-- #sidebar-second -->
         <?php endif; ?>
 
-      </section>
-    </main> <!-- /#main-wrapper, /#main -->
+      </main>
+    </div> <!-- main, /#main-wrapper -->
 
-    <footer id="footer">
-      <section class="footer">
+    <div id="footer-wrapper">
+      <footer id="footer" class="footer">
         <?php print render($page['footer']); ?>
-      </section>
-    </footer> <!-- /.section, /#footer -->
+      </footer>
+    </div> <!-- /.footer, /#footer-wrapper -->
 
   </div>
 </div> <!-- /#page, /#page-wrapper -->
