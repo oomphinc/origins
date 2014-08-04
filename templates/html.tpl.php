@@ -43,12 +43,6 @@
  * landscape. This is good for most sites and is the default provided.
  * <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
  *
- * Use this one if you want content to zoom when switchin portrait to
- * landscape. This is good for liquid sites with text content. Note that you
- * need to add a CSS override to prevent text zooming in iOS Safari.
- * <meta name="viewport" content="width=device-width, minimal-ui">
- * CSS: {-webkit-text-size-adjust: none;}
- *
  * TODO: find other meta tags for other devices.
  *
  * @see template_preprocess()

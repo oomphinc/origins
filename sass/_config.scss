@@ -33,11 +33,11 @@ $secondary-color: #000;
 	@import "preprocess";
 	@import "normalize";
 
-	// CSS Grid Framework Logic
+// CSS Grid Framework Logic
 	@import "foundation/settings";
 	@import "foundation/components/block-grid";
 	@import "foundation/components/grid";
 
 // Theme Styles
 	@import "base";
-// @import "print";
+	@import "print";
