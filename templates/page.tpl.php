@@ -119,9 +119,11 @@
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
-      <nav id="breadcrumb">
-        <?php print $breadcrumb; ?>
-      </nav>
+      <div id="breadcrumb-wrapper">
+        <nav id="breadcrumb">
+          <?php print $breadcrumb; ?>
+        </nav>
+      </div>
     <?php endif; ?>
 
     <?php print $messages; ?>
