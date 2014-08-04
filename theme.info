@@ -30,15 +30,15 @@ regions[page_top]     = Page top
 regions[page_bottom]  = Page bottom
 
 ; Other required regions that are not hidden are [help, content, footer]
-regions[header]       = Header
-regions[nav] = Navigation
-regions[help] = Help
-regions[content_top] = Content top
-regions[content] = Content
-regions[content_bottom] = Content bottom
-regions[sidebar_first] = First sidebar
-regions[sidebar_second] = Second sidebar
-regions[footer] = Footer
+regions[header]          = Header
+regions[nav]             = Navigation
+regions[help]            = Help
+regions[content_top]     = Content top
+regions[content]         = Content
+regions[content_bottom]  = Content bottom
+regions[sidebar_first]   = First sidebar
+regions[sidebar_second]  = Second sidebar
+regions[footer]          = Footer
 
 ; You can also set regions to be hidden on the Blocks admin screen like so:
 ; regions[regions_hidden][] = nav

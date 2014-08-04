@@ -47,7 +47,7 @@
  * landscape. This is good for liquid sites with text content. Note that you
  * need to add a CSS override to prevent text zooming in iOS Safari.
  * <meta name="viewport" content="width=device-width, minimal-ui">
- * CSS: {-webkit-text-size-adjust: none;}
+ * CSS: {-webkit-text-size-adjust: none;} This is currently included with normalize.scss
  *
  * TODO: find other meta tags for other devices.
  *
