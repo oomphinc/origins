@@ -4,18 +4,145 @@
 /**
  * Base
  *************************/
+// Globals
+// Typography
+// Layout
+// Blocks
+// Views
+// Content
 
 /**
  * Globals
  */
+html {
+	box-sizing: border-box;
+	font-size: $base-font-size;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+}
+
+html,
+body {
+	height: 100%;
+}
 
 /**
  * Typography
  */
+h1, h2, h3, h4, h5, h6 {}
+
+h1,
+h1 a {
+	// appears in the name and slogan area
+	&.site-name {
+		a {
+
+		}
+	}
+	// appears in single node pages
+	&#page-title {
+		a {
+
+		}
+	}
+}
+
+h2 {
+	&.block-title {
+
+	}
+	// appears in node archive pages
+	&.node-title {
+
+	}
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {}
 
 /**
  * Layout
  */
+
+/* define some rows */
+.header,
+.region-nav,
+#system-messages,
+.main,
+.footer {
+	@include grid-row();
+}
+
+
+
+#header {
+
+}
+
+#site-navigation {
+	.region-nav {
+
+	}
+}
+
+#main {
+
+}
+
+#content {
+	.two-sidebars & {
+		@include grid-column(6, $push:3);
+	}
+	.one-sidebar & {
+		@include grid-column(9);
+	}
+	.one-sidebar.sidebar-first & {
+		@include grid-column(9, $push:3);
+	}
+}
+
+#sidebar-first {
+	.two-sidebars & {
+		@include grid-column(3, $pull:6);
+	}
+	.one-sidebar.sidebar-first & {
+		@include grid-column(3, $pull:9);
+	}
+}
+
+#sidebar-second {
+	.two-sidebars & {
+		@include grid-column(3);
+	}
+	.one-sidebar.sidebar-second & {
+		@include grid-column(3);
+	}
+}
+
+#footer {
+
+}
 
 /**
  * Blocks

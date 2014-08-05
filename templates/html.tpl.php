@@ -56,10 +56,10 @@
  * @see template_process()
  */
 ?><!DOCTYPE html>
-<!--[if IEMobile 7]><html class="iem7" <?php print $html_attributes; ?>><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" <?php print $html_attributes; ?>><![endif]-->
-<!--[if IE 8]><html class="lt-ie9" <?php print $html_attributes; ?>><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
+<!--[if IEMobile 7]><html class="iem7" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><!--<![endif]-->
 
 <head>
   <?php print $head; ?>
