@@ -58,12 +58,14 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - $page['help']: Dynamic help text, mostly for admin pages.
+ * - $page['header']: Items for the header region.
  * - $page['nav']: Should be reserved for navigation items.
+ * - $page['help']: Dynamic help text, mostly for admin pages.
+ * - $page['content_top']: The main content on the top of the current page.
  * - $page['content']: The main content of the current page.
+ * - $page['content_bottom']: The main content on the bottom of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
  * - $page['sidebar_second']: Items for the second sidebar.
- * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
  *
  * @see template_preprocess()
@@ -90,15 +92,9 @@
         <?php if ($site_name || $site_slogan): ?>
           <div id="name-and-slogan">
             <?php if ($site_name): ?>
-              <?php if ($title): ?>
-                <div id="site-name"><strong>
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                </strong></div>
-              <?php else: /* Use h1 when the content title is empty */ ?>
-                <h1 id="site-name">
-                  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-                </h1>
-              <?php endif; ?>
+              <h1 id="site-name">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+              </h1>
             <?php endif; ?>
 
             <?php if ($site_slogan): ?>

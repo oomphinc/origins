@@ -4,12 +4,6 @@
 /**
  * Base
  *************************/
-// Globals
-// Typography
-// Layout
-// Blocks
-// Views
-// Content
 
 /**
  * Globals
@@ -25,6 +19,7 @@ html {
 
 body {
 	height: 100%;
+	font-family: $base-font-stack;
 }
 
 html,
@@ -39,8 +34,9 @@ h1, h2, h3, h4, h5, h6 {}
 
 h1,
 h1 a {
+	font-size: 2rem;
 	// appears in the name and slogan area
-	&.site-name {
+	&#site-name {
 		a {
 
 		}
@@ -54,32 +50,39 @@ h1 a {
 }
 
 h2 {
-	&.block-title {
+	font-size: 1.8rem;
+	&.block-title,
+	&.block-title a {
 
 	}
 	// appears in node archive pages
-	&.node-title {
+	&.node-title,
+	&.node-title a {
 
 	}
 }
 
 h3 {
+	font-size: 1.6rem;
 
 }
 
 h4 {
-
+	font-size: 1.5rem;
 }
 
 h5 {
-
+	font-size: 1.4rem;
 }
 
 h6 {
-
+	font-size: 1.3rem;
 }
 
-p {}
+p, li {
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
 
 /**
  * Layout
@@ -93,8 +96,6 @@ p {}
 .footer {
 	@include grid-row();
 }
-
-
 
 #header {
 
