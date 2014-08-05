@@ -55,11 +55,11 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
-?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<!--[if IEMobile 7]><html class="iem7" xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
-<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><!--<![endif]-->
+?><!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html xml:lang="<?php print $language->language; ?>" version="HTML+RDFa 1.1" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>><!--<![endif]-->
 
 <head>
   <?php print $head; ?>
