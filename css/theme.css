@@ -2516,33 +2516,45 @@ p, li {
  * Layout
  */
 /* define some rows */
-.header,
-.region-nav,
+#header,
+#navigation,
+#breadcrumb,
 #system-messages,
-.main,
-.footer {
+#content-top,
+#main,
+#content-bottom,
+#footer {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 128rem; }
-  .header:before, .header:after,
-  .region-nav:before,
-  .region-nav:after,
+  #header:before, #header:after,
+  #navigation:before,
+  #navigation:after,
+  #breadcrumb:before,
+  #breadcrumb:after,
   #system-messages:before,
   #system-messages:after,
-  .main:before,
-  .main:after,
-  .footer:before,
-  .footer:after {
+  #content-top:before,
+  #content-top:after,
+  #main:before,
+  #main:after,
+  #content-bottom:before,
+  #content-bottom:after,
+  #footer:before,
+  #footer:after {
     content: " ";
     display: table; }
-  .header:after,
-  .region-nav:after,
+  #header:after,
+  #navigation:after,
+  #breadcrumb:after,
   #system-messages:after,
-  .main:after,
-  .footer:after {
+  #content-top:after,
+  #main:after,
+  #content-bottom:after,
+  #footer:after {
     content: "";
     display: table;
     clear: both; }

@@ -89,11 +89,14 @@ p, li {
  */
 
 /* define some rows */
-.header,
-.region-nav,
+#header,
+#navigation,
+#breadcrumb,
 #system-messages,
-.main,
-.footer {
+#content-top,
+#main,
+#content-bottom,
+#footer {
 	@include grid-row();
 }
 

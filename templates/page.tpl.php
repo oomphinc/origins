@@ -109,20 +109,34 @@
     </div> <!-- header, #header-wrapper -->
 
     <?php if ($page['nav']): ?>
-      <nav id="site-navigation">
-        <?php print render($page['nav']); ?>
-      </nav>
+      <div id="navigation-wrapper">
+        <nav id="navigation" class="navigation">
+          <?php print render($page['nav']); ?>
+        </nav>
+      </div>
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb-wrapper">
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" class="breadcrumb">
           <?php print $breadcrumb; ?>
         </nav>
       </div>
     <?php endif; ?>
 
-    <?php print $messages; ?>
+    <?php if($messages): ?>
+      <div id="sytem-messages-wrapper">
+        <div id="system-messages" class="system-messages">
+          <?php print $messages; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['content_top']): ?>
+      <section id="content-top" class="section content-top">
+        <?php print render($page['content_top']); ?>
+      </section>
+    <?php endif; ?>
 
     <div id="main-wrapper">
       <main id="main" class="main">
@@ -146,21 +160,9 @@
           </ul>
         <?php endif; ?>
 
-        <?php if ($page['content_top']): ?>
-          <section id="content-top" class="section content-top">
-            <?php print render($page['content_top']); ?>
-          </section>
-        <?php endif; ?>
-
         <section id="content" class="section content">
           <?php print render($page['content']); ?>
         </section>
-
-        <?php if ($page['content_bottom']): ?>
-          <section id="content-bottom" class="section content-bottom">
-            <?php print render($page['content_bottom']); ?>
-          </section>
-        <?php endif; ?>
 
         <?php print $feed_icons; ?>
 
@@ -178,6 +180,12 @@
 
       </main>
     </div> <!-- main, /#main-wrapper -->
+
+    <?php if ($page['content_bottom']): ?>
+      <section id="content-bottom" class="section content-bottom">
+        <?php print render($page['content_bottom']); ?>
+      </section>
+    <?php endif; ?>
 
     <div id="footer-wrapper">
       <footer id="footer" class="footer">
