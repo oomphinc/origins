@@ -2489,33 +2489,44 @@ body {
 /**
  * Typography
  */
+/* Content Components */
 h1,
 h1 a {
   font-size: 2rem; }
 
-h2 {
+h2,
+h2 a {
   font-size: 1.8rem; }
 
-h3 {
+h3,
+h3 a {
   font-size: 1.6rem; }
 
-h4 {
+h4,
+h4 a {
   font-size: 1.5rem; }
 
-h5 {
+h5,
+h5 a {
   font-size: 1.4rem; }
 
-h6 {
+h6,
+h6 a {
   font-size: 1.3rem; }
 
 p, li {
   font-size: 1.2rem;
   line-height: 1.5; }
 
+/* Heading Types */
+/* WYSIWYG Components */
+/* Form Components */
+/* Media Components */
+/* Extras & Elements */
 /**
  * Layout
  */
-/* define some rows */
+/* Define some rows */
 #header,
 #navigation,
 #breadcrumb,
@@ -2559,6 +2570,9 @@ p, li {
     display: table;
     clear: both; }
 
+/* Header */
+/* Navigation */
+/* Main Content */
 .two-sidebars #content {
   position: relative;
   padding-left: 0.6rem;
@@ -2609,15 +2623,7 @@ p, li {
   width: 12.5%;
   float: left; }
 
-/**
- * Blocks
- */
-/**
- * Views
- */
-/**
- * Content
- */
+/* Footer */
 /**
  * Theme
  *************************/

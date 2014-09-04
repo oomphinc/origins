@@ -30,52 +30,40 @@ body {
 /**
  * Typography
  */
-h1, h2, h3, h4, h5, h6 {}
+
+/* Content Components */
+h1, h2, h3, h4, h5, h6 {
+
+}
 
 h1,
 h1 a {
 	font-size: 2rem;
-	// appears in the name and slogan area
-	&#site-name {
-		a {
-
-		}
-	}
-	// appears in single node pages
-	&#page-title {
-		a {
-
-		}
-	}
 }
 
-h2 {
+h2,
+h2 a {
 	font-size: 1.8rem;
-	&.block-title,
-	&.block-title a {
-
-	}
-	// appears in node archive pages
-	&.node-title,
-	&.node-title a {
-
-	}
 }
 
-h3 {
+h3,
+h3 a {
 	font-size: 1.6rem;
 
 }
 
-h4 {
+h4,
+h4 a {
 	font-size: 1.5rem;
 }
 
-h5 {
+h5,
+h5 a {
 	font-size: 1.4rem;
 }
 
-h6 {
+h6,
+h6 a {
 	font-size: 1.3rem;
 }
 
@@ -84,11 +72,41 @@ p, li {
 	line-height: 1.5;
 }
 
+/* Heading Types */
+h1 {
+	&#page-title {
+
+	}
+}
+
+h2 {
+	&#block-title {
+
+	}
+	&node-title {
+
+	}
+}
+
+/* WYSIWYG Components */
+a {
+
+}
+
+/* Form Components */
+
+/* Media Components */
+img {
+
+}
+
+/* Extras & Elements */
+
 /**
  * Layout
  */
 
-/* define some rows */
+/* Define some rows */
 #header,
 #navigation,
 #breadcrumb,
@@ -100,16 +118,19 @@ p, li {
 	@include grid-row();
 }
 
+/* Header */
 #header {
 
 }
 
+/* Navigation */
 #site-navigation {
 	.region-nav {
 
 	}
 }
 
+/* Main Content */
 #main {
 
 }
@@ -144,18 +165,7 @@ p, li {
 	}
 }
 
+/* Footer */
 #footer {
 
 }
-
-/**
- * Blocks
- */
-
-/**
- * Views
- */
-
-/**
- * Content
- */
