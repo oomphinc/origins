@@ -1,0 +1,55 @@
+// @file Articles
+// This file contains basic styles for article elements.
+
+// Globals
+.list-page {
+	@include grid-column(23);
+	@include zero;
+	article {
+		border-bottom: 1px solid $color3;
+		padding-bottom: 4rem;
+		margin-bottom: 4rem;
+		@media #{$xlarge-up} {
+			padding-bottom: 9rem;
+			margin-bottom: 8rem;
+		}
+		&.last {
+			padding-bottom: 0;
+			margin-bottom: 4rem;
+			border-bottom: 0;
+		}
+	}
+}
+
+// Views Pager
+.item-list ul.pager {
+	text-align: right;
+	border-bottom: 1px solid $color3;
+	padding: 0 0 4rem;
+	li {
+		padding: 0 0.3rem 0 0;
+		margin: 0;
+	}
+	.pager-current.first,
+	.pager-current.last {
+		display: inline;
+		visibility: visible;
+	}
+	a,
+	a:link,
+	.pager-current {
+		color: $color6;
+		font-size: 0.8em;
+		font-weight: 100;
+		background-color: $color3;
+		padding: 0.5rem 0.9rem;
+		&:hover {
+			background-color: $color7;
+			text-decoration: none;
+		}
+	}
+	.pager-current {
+		margin-right: 0.2rem;
+		background-color: $color7;
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-pixrem": "^0.1.1",
+    "gulp-plumber": "^0.6.4",
+    "gulp-ruby-sass": "^0.4.3",
+    "gulp-sass": "^0.7.1",
+    "gulp-util": "^3.0.0",
+    "gulp-watch": "^0.5.3"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
+  }
+}

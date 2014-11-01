@@ -1,0 +1,73 @@
+name = Oomph Base Theme
+description = A responsive blank slate for theme developers.
+version = 7.x-alpha-1
+core = 7.x
+
+; STYLESHEETS
+; ===================================================
+
+stylesheets[all][] = css/theme.css
+stylesheets[print][] = css/print.css
+
+; SCRIPTS
+; ===================================================
+
+; Add any scripts that you want here. They will be added after any
+; system and module scripts automatically. You can also add scripts
+; from your template.php with drupal_add_js('scriptname.js', 'theme')
+
+scripts[] = js/modernizr.min.js
+scripts[] = js/respond.min.js
+; scripts[] = js/script.js
+
+; REGIONS
+; ===================================================
+
+; You can't assign blocks to these regions, but Drupal uses them
+; in html.tpl.php and then hides them from the blocks admin UI.
+; Do not delete these.
+; @see system.module system_system_info_alter()
+
+regions[page_top]     = Page top
+regions[page_bottom]  = Page bottom
+
+; Other required regions that are not hidden are [help, content, footer]
+regions[header]          = Header
+regions[nav]             = Navigation
+regions[help]            = Help
+regions[content_top]     = Content top
+regions[content]         = Content
+regions[content_bottom]  = Content bottom
+regions[sidebar_first]   = First sidebar
+regions[sidebar_second]  = Second sidebar
+regions[footer]          = Footer
+
+; You can also set regions to be hidden on the Blocks admin screen like so:
+; regions[regions_hidden][] = nav
+
+; FEATURES (the checkboxes on the theme admin screen)
+; ===================================================
+
+; Comment out any that you want to remove from the screen.
+; If you want to check/uncheck a feature, see the next section for settings.
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+; We almost always use a block to display menus, so we remove these.
+; You can turn them back on if you want to use them instead.
+;features[] = main_menu
+;features[] = secondary_menu
+
+; SETTINGS (checking/unchecking the features defined above)
+; ===================================================
+
+; See example useage below. Add to override defaults.
+; If you remove a feature above, you don't have to disable it below.
+;settings[toggle_logo] = 1
+;settings[toggle_main_menu] = 1
+

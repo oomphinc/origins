@@ -1,0 +1,223 @@
+// @file Base
+// This file contains basic theme elements fundamental to all sites.
+
+// Globals
+html {
+	box-sizing: border-box;
+	font-size: $base-font-size;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+	font-family: $base-font-stack;
+	font-size: 16px;
+	color: $color5;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6 {}
+
+h1,
+h1 a {
+	font-size: 4rem;
+	// appears in the name and slogan area
+	&#site-name {
+		a {
+		}
+	}
+	// appears in single node pages
+	&#page-title {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+h2 {
+	font-size: 3rem;
+	margin: 0 0 0.8rem 0;
+	&.block-title,
+	&.block-title a {
+		font-size: 2.8rem;
+		margin-bottom: 0;
+	}
+}
+
+h3 {
+	font-size: 2.3rem;
+}
+
+h4 {
+	font-size: 2rem;
+}
+
+h5 {
+	font-size: 1.8rem;
+}
+
+h6 {
+	font-size: 1.6rem;
+}
+
+p, li {
+	line-height: 1.5;
+}
+
+a,
+a:link {
+	color: $color6;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// Layout
+
+// Defining Rows
+#header,
+.navigation-inner,
+#breadcrumb,
+.message-wrapper-inner,
+#main,
+#footer {
+	@include grid-row();
+}
+
+// Navigation Region
+.region-nav {
+	@include grid-column(24);
+}
+
+// Breadcrumb Section
+.breadcrumb-inner {
+	@include grid-column(24);
+}
+
+// Message Section
+.message-container {
+	@include grid-column(24);
+}
+
+// Content Region
+#content {
+	.no-sidebars & {
+		@include grid-column(24);
+	}
+	.sidebar-first & {
+		@include grid-column(24);
+		@media #{$xlarge-up} {
+			@include grid-column(18, $push:6);
+		}
+	}
+	.sidebar-second & {
+		@include grid-column(24);
+		@media #{$xlarge-up} {
+			@include grid-column(18);
+		}
+	}
+	.two-sidebars & {
+		@include grid-column(24);
+		@media #{$xlarge-up} {
+			@include grid-column(12, $push:6);
+		}
+	}
+}
+
+// Content Inner Regions
+.region-help,
+#content-top,
+.region-content,
+#content-bottom {
+}
+
+.tabs {
+	@include grid-column(24);
+}
+
+// Sidebar First Region
+#sidebar-first {
+	@include grid-column(24);
+	@media #{$xlarge-up} {
+		@include grid-column(6, $pull:12);
+	}
+	.one-sidebar & {
+	@media #{$xlarge-up} {
+		@include grid-column(6, $pull:18);
+	}
+	}
+	.two-sidebars & {
+	}
+}
+
+// Sidebar Second Region
+#sidebar-second {
+	@media #{$xlarge-up} {
+		@include grid-column(6);
+		float: right;
+	}
+	@include grid-column(24);
+	.one-sidebar & {
+	}
+	.two-sidebars & {
+	}
+}
+
+// Blocks
+
+// Sidebar Blocks
+.sidebar {
+	section.block  {
+		margin-bottom: 4rem;
+		@media #{$large-only} {
+			@include grid-column(12);
+			&:nth-child(2n+2) {
+				clear: right;
+				border-left: 0.5rem solid $color1;
+			}
+			&:nth-child(2n+1) {
+				clear: left;
+				border-right: 0.5rem solid $color1;
+			}
+		}
+		h2 {
+			border-bottom: 2px solid $color6;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+.menu-sidebar-block {
+	ul {
+		@include zero-list;
+		li {
+		}
+	}
+}
+
+.article-featured {
+	ul {
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+	.post-date {
+		color: $color4;
+		font-size: 0.8em;
+		text-transform: uppercase;
+	}
+}

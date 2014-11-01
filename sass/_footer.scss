@@ -1,0 +1,14 @@
+// @file Footer
+// This file contains basic styles for footer region elements.
+
+// Footer Region
+.region-footer {
+	@include grid-column(24);
+}
+
+// Blocks ***/
+
+.copyright {
+	font-size: 0.8em;
+	text-align: right;
+}

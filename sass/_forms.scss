@@ -1,0 +1,26 @@
+// @file Forms
+// This file contains styles for forms.
+
+// Globals
+input,
+.form-textarea-wrapper textarea {
+	width: 100%;
+	border: 1px solid $color3;
+	padding: 0.8rem 1rem 0.5rem 1rem;
+	@media #{$xlarge-up} {
+		width: 90%;
+	}
+}
+
+input.form-submit {
+	width: 100%;
+	background-color: $color6;
+	border: 1px solid $color6;
+	color: $color1;
+	@media #{$medium-up} {
+		width: 30%;
+	}
+	@media #{$large-up} {
+		width: 20%;
+	}
+}

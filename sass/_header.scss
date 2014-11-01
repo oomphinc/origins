@@ -1,0 +1,52 @@
+// @file Header
+// This file contains basic styles for header region elements.
+
+// Header Region
+#logo,
+#name-and-slogan,
+.region-header {
+	@include grid-column(24);
+}
+
+#logo {
+	@media #{$xlarge-up} {
+		@include grid-column(6);
+	}
+}
+
+.region-header {
+	@media #{$xlarge-up} {
+		@include grid-column(18);
+	}
+}
+
+// Blocks
+
+// Main Menu Block
+.main-menu {
+	ul.nice-menu-down {
+		float: right;
+		@media #{$xlarge-up} {
+			margin-top: 6rem;
+		}
+		@media #{$xxlarge-up} {
+			margin-top: 12rem;
+		}
+		li {
+			background-color: transparent;
+			border: 0;
+			width: 100%;
+			@media #{$large-up} {
+				width: auto;
+				border-right: 1px solid $color3;
+			}
+			&.last {
+				border: 0;
+			}
+			a {
+				color: $color6;
+				padding: 0 2rem;
+			}
+		}
+	}
+}
