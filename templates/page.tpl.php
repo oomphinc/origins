@@ -109,27 +109,45 @@
     </div> <!-- header, #header-wrapper -->
 
     <?php if ($page['nav']): ?>
-      <nav id="site-navigation">
-        <?php print render($page['nav']); ?>
-      </nav>
+      <div id="navigation-wrapper">
+        <nav id="navigation" class="navigation">
+          <?php print render($page['nav']); ?>
+        </nav>
+      </div>
     <?php endif; ?>
 
     <?php if ($breadcrumb): ?>
       <div id="breadcrumb-wrapper">
-        <nav id="breadcrumb">
+        <nav id="breadcrumb" class="breadcrumb">
           <?php print $breadcrumb; ?>
         </nav>
       </div>
     <?php endif; ?>
 
-    <?php print $messages; ?>
+    <?php if($messages): ?>
+      <div id="sytem-messages-wrapper">
+        <div id="system-messages" class="system-messages">
+          <?php print $messages; ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['content_top']): ?>
+      <section id="content-top" class="section content-top">
+        <?php print render($page['content_top']); ?>
+      </section>
+    <?php endif; ?>
 
     <div id="main-wrapper">
       <main id="main" class="main">
 
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php if ($title): ?>
+          <h1 class="title" id="page-title">
+            <?php print $title; ?>
+          </h1>
+        <?php endif; ?>
         <?php print render($title_suffix); ?>
 
         <?php if ($tabs): ?>
@@ -138,7 +156,11 @@
           </nav>
         <?php endif; ?>
 
-        <?php print render($page['help']); ?>
+        <?php if ($page['help']): ?>
+          <section id="help" class="section help">
+            <?php print render($page['help']); ?>
+          </section>
+        <?php endif; ?>
 
         <?php if ($action_links): ?>
           <ul class="action-links">
@@ -146,23 +168,15 @@
           </ul>
         <?php endif; ?>
 
-        <?php if ($page['content_top']): ?>
-          <section id="content-top" class="section content-top">
-            <?php print render($page['content_top']); ?>
-          </section>
-        <?php endif; ?>
-
         <section id="content" class="section content">
           <?php print render($page['content']); ?>
         </section>
 
-        <?php if ($page['content_bottom']): ?>
-          <section id="content-bottom" class="section content-bottom">
-            <?php print render($page['content_bottom']); ?>
-          </section>
+        <?php if ($feed_icons): ?>
+          <div id="feed-icons">
+            <?php print $feed_icons; ?>
+          </div>
         <?php endif; ?>
-
-        <?php print $feed_icons; ?>
 
         <?php if ($page['sidebar_first']): ?>
           <section id="sidebar-first" class="section sidebar">
@@ -178,6 +192,12 @@
 
       </main>
     </div> <!-- main, /#main-wrapper -->
+
+    <?php if ($page['content_bottom']): ?>
+      <section id="content-bottom" class="section content-bottom">
+        <?php print render($page['content_bottom']); ?>
+      </section>
+    <?php endif; ?>
 
     <div id="footer-wrapper">
       <footer id="footer" class="footer">
