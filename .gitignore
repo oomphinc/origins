@@ -7,6 +7,13 @@ javascripts/*-ck.js
 # Packages #
 ############
 node_modules/
+*.log
+*.lock
+
+# CSS Frameworks #
+##################
+bourbon
+neat
 
 # OS generated files #
 ######################
