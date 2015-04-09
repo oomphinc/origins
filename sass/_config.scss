@@ -6,6 +6,7 @@
 // Font Stacks
 $base-font-stack: sans;
 $alt-font-stack: sans-serif;
+$base-font-size: 10px;
 
 // Colors
 $primary-color: #fff;
@@ -34,10 +35,10 @@ $secondary-color: #000;
 	@import "normalize";
 
 // CSS Grid Framework Logic
-	@import "foundation/settings";
-	@import "foundation/components/block-grid";
-	@import "foundation/components/grid";
-
+	@import "bourbon/bourbon";
+	@import "neat/neat";
+	@import "grid_settings";
+	
 // Theme Styles
 	@import "base";
 	@import "print";
