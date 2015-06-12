@@ -1,2 +1,36 @@
 // @file Preprocess Mixins
 // @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
+
+// Link + Hover
+// Simple Link + Hover mixin
+//
+// @usage a {
+//  @include link($color1, $color2, decoration1, decoration2);
+// }
+@mixin link($color1: $link-color-link, $color2: $link-color-hover, $decoration1: underline, $decoration2: none) {
+	&:link,
+	&:visited {
+		@include transition(all 0.4s ease-in-out);
+		color: $color1;
+		cursor: pointer;
+		text-decoration: $decoration1;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color2;
+		text-decoration: $decoration2;
+	}
+}
+
+// Opacity
+// Simple Opacity mixin with browser prefixes
+//
+// @usage .box {
+//  @include opacity(0.5);
+// }
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}

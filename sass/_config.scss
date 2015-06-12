@@ -3,43 +3,74 @@
 
 // VARIABLES
 
-//////////////////// Typography ////////////////////
-// Colors
-$color-1: #337ab7;
-$color-2: #5cb85c;
-$color-3: #5bc0de;
-$color-4: #666666;
-$color-5: #f0ad4e;
-$color-6: #d9534f;
+// Font Sizes
+$base-font-size: 16; // The font size set on the root html element.
+$base-line-height: 1.5;
 
-$graycale-color-1: #fff;
-$graycale-color-2: #000;
-$graycale-color-3: lighten(#000, 13.5%); // #222
-$graycale-color-4: lighten(#000, 20%);   // #333
-$graycale-color-5: lighten(#000, 33.5%); // #555
-$graycale-color-6: lighten(#000, 46.7%); // #777
-$graycale-color-7: lighten(#000, 93.5%); // #eee
+$h1-font-size: (32 / $base-font-size) * 1em;
+$h2-font-size: (24 / $base-font-size) * 1em;
+$h3-font-size: (21 / $base-font-size) * 1em;
+$h4-font-size: 1 * 1em;
+$h5-font-size: 0.83 * 1em;
+$h6-font-size: 0.75 * 1em;
 
 // Font Stacks
-$font-stack-1: Arial, Helvetica, sans-serif;
-$font-stack-2: Georgia, serif;
+$serif-fallback: Georgia, "Times New Roman", Times, serif;
+$sans-serif-fallback: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-// Font Sizes
-$base-font-size: 1;
-$base-font-pixel-size: 10px;
+$font-stack-1: $serif-fallback;
+$font-stack-2: $sans-serif-fallback;
 
-$heading-size-1: $base-font-size * 2.4rem;
-$heading-size-2: $base-font-size * 2.2rem;
-$heading-size-3: $base-font-size * 2.0rem;
-$heading-size-4: $base-font-size * 1.8rem;
-$heading-size-5: $base-font-size * 1.6rem;
-$heading-size-6: $base-font-size * 1.4rem;
+// Now create some variables for the font stacks we want to use on this site.
+$base-font-family: $font-stack-1;
 
-$paragraph-size-1: $heading-size-6;
+$h1-font-family: $font-stack-2;
+$h2-font-family: $font-stack-2;
+$h3-font-family: $font-stack-2;
+$h4-font-family: $font-stack-2;
+$h5-font-family: $font-stack-2;
+$h6-font-family: $font-stack-2;
 
 // Colors
-$primary-color: #fff;
-$secondary-color: #000;
+/*
+* Getter function for color palettes using SASS maps
+* Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+* Usage: color: palette(brand,tan);
+*/
+@function palette($palette, $tone: 'base') {
+	@return map-get( map-get($palettes, $palette), $tone );
+}
+
+$palettes: (
+	mono: (
+		black: #000,
+		x-dark: #222,
+		dark: #333,
+		mid-dark: #666,
+		base: #888, // We need one base value, so we can declare palette(mono) and not get an error
+		mid-light: #999,
+		light: #ccc,
+		x-light: #e6e6e6,
+		white: #fff  
+	),
+	brand: (
+		base: #337ab7,
+		green: #5cb85c,
+		light-blue: #5bc0de,
+		orange: #f0ad4e,
+		red: #d9534f
+	)
+);
+
+$h1-color: palette(brand,green);
+$h2-color: palette(brand);
+$h3-color: palette(brand);
+$h4-color: palette(brand);
+$h5-color: palette(brand);
+$h6-color: palette(brand);
+
+$link-color-link: palette(brand,red);
+$link-color-hover: palette(brand);
 
 // Imports
 //
@@ -55,7 +86,6 @@ $secondary-color: #000;
 
 // CSS Philosiphies
 //
-// Use rems for font sizes
 // Use inline media queries
 // Use inline IE styles
 
@@ -66,6 +96,7 @@ $secondary-color: #000;
 
 // CSS Preprocess Logic
 	@import "mixins";
+	@import "placeholders";
 
 // Theme Styles
 	@import "base";

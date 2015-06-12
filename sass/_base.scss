@@ -10,16 +10,11 @@
  */
 html {
 	box-sizing: border-box;
-	font-size: $base-font-pixel-size;
+	font-size: $base-font-size;
 }
 
 *, *:before, *:after {
 	box-sizing: inherit;
-}
-
-body {
-	height: 100%;
-	font-family: $font-stack-1;
 }
 
 html,
