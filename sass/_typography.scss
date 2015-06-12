@@ -5,22 +5,13 @@ button,
 input,
 select,
 textarea {
-	color: $graycale-color-2;
-	font-family: $font-stack-1;
-	font-size: $paragraph-size-1;
-	line-height: 1.5;
+	color: palette(mono);
+	font-family: $base-font-family;
+	line-height: $base-line-height;
 }
 
 a {
-	color: $color-1;
-	&:visited {
-		color: $color-3;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color-3;
-	}
+	@include link;
 }
 
 a[href^=tel]{
@@ -34,30 +25,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: $heading-size-1;
+	color: $h1-color;
+	font-family: $h1-font-family;
+	font-size: $h1-font-size;
 	&#site-name {
-		font-size: $heading-size-1 * 1.5;
+		font-size: $h1-font-size;
 	}
 }
 
 h2 {
-	font-size: $heading-size-2;
+	color: $h2-color;
+	font-family: $h2-font-family;
+	font-size: $h2-font-size;
 }
 
 h3 {
-	font-size: $heading-size-3;
+	color: $h3-color;
+	font-family: $h3-font-family;
+	font-size: $h3-font-size;
 }
 
 h4 {
-	font-size: $heading-size-4;
+	color: $h4-color;
+	font-family: $h4-font-family;
+	font-size: $h4-font-size;
 }
 
 h5 {
-	font-size: $heading-size-5;
+	color: $h5-color;
+	font-family: $h5-font-family;
+	font-size: $h5-font-size;
 }
 
 h6 {
-	font-size: $heading-size-6;
+	color: $h6-color;
+	font-family: $h6-font-family;
+	font-size: $h6-font-size;
 }
 
 p {
@@ -183,5 +186,5 @@ th {
 }
 
 #site-slogan{
-	font-size: $heading-size-2;
+	font-size: $h2-font-size;
 }

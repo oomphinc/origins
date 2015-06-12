@@ -1,0 +1,20 @@
+// @file Preprocess Placeholders
+// @link krasimirtsonev.com/blog/article/SASS-mixins-extends-and-placeholders-differences-use-cases
+
+// Zero
+// Remove all padding & margins
+%zero {
+	margin: 0;
+	padding: 0;
+}
+
+// Zero List
+// Remove list styles
+%zero-list {
+	@extend %zero;
+	list-style: none;
+	li {
+		@extend %zero;
+		list-style: none;
+	}
+}
