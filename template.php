@@ -24,7 +24,7 @@ function origins_preprocess_region(&$variables) {}
  * Override or insert variables into the node template.
  */
 function origins_preprocess_node(&$variables) {
-	// Output a class on the damn node title
+	// Output a class on the node title
 	$variables['title_attributes_array']['class'][] = 'node-title';
 }
 
@@ -32,6 +32,6 @@ function origins_preprocess_node(&$variables) {
  * Override or insert variables into the block template.
  */
 function origins_preprocess_block(&$variables) {
-	// Output a class on the damn block title
+	// Output a class on the block title
 	$variables['title_attributes_array']['class'][] = 'block-title';
 }
